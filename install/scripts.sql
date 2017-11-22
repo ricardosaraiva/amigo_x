@@ -11,6 +11,7 @@ CREATE TABLE usuario (
 CREATE TABLE grupo (
 	id INT(11) PRIMARY KEY  auto_increment,
     nome VARCHAR(100),
+    status TINYINT(1) NOT NULL DEFAULT 1,
     created_at DATETIME,
     updated_at DATETIME
 ) ENGINE = INNODB;

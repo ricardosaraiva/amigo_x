@@ -24,6 +24,7 @@ class Grupo {
             select('grupo.id', 'grupo.nome', 'grupo_usuario.permissao')->
             where('grupo_usuario.id_usuario','=', $_SESSION['id'])->
             where('grupo_usuario.status','=', 1)->
+            where('grupo.status','=', 1)->
         get();
 
         $this->c['view']->render($response, 'grupo.html',[
@@ -47,6 +48,7 @@ class Grupo {
             DB::beginTransaction();
             $grupo = new \Model\Grupo;
             $grupo->nome = $dados['nome'];
+            $grupo->status = 1;
             $grupo->save();
     
             $grupoUsuario = new \Model\GrupoUsuario;
@@ -111,7 +113,9 @@ class Grupo {
         }
         
         try {
-            \Model\Grupo::where('id', '=', ( (int) $dados['id']))->delete();
+            \Model\Grupo::where('id', '=', ( (int) $dados['id']))->update([
+                'status' => 0
+            ]);
             return $response->withJson('Grupo removido com sucesso!');
         } catch(\Exception $e) {
             return $response->withJson([
@@ -126,6 +130,7 @@ class Grupo {
             select('grupo.id', 'grupo.nome', 'grupo_usuario.permissao')->
             where('grupo_usuario.id_usuario','=', $_SESSION['id'])->
             where('grupo.id','=', (int) $args['id'])->
+            where('grupo.status','=', 1)->
         get();
 
         //valida se o grupo é valido e o usuario tem acesso ao grupo
@@ -270,7 +275,7 @@ class Grupo {
     public function permissao(Request $request, Response $response) {
         $dados = $request->getParsedBody();
 
-        //valida se o usaurario tem acesso para convidar outro 
+        //valida se o usaurario tem acesso para alterar a permissão do outro usuario
         $permissao = \Model\Grupo::getPermissao($_SESSION['id'],$dados['grupo']);
         if($permissao != 'dono') {
             return $response->withJson([ 
@@ -300,6 +305,7 @@ class Grupo {
         $grupoUsuario = \Model\GrupoUsuario::
             where('id_usuario','=', $_SESSION['id'])->
             where('id_grupo','=', $dados['id'])->
+            where('status','=', 0)->
             select('id')->
         get();
 

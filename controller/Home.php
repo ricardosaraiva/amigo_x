@@ -19,6 +19,7 @@ class Home {
             select('grupo.id', 'grupo.nome')->
             where('grupo_usuario.id_usuario','=', $_SESSION['id'])->
             where('grupo_usuario.status','=', 0)->
+            where('grupo.status','=', 1)->
         get();
 
         $this->c['view']->render($response, 'home.html',[

@@ -7,6 +7,7 @@ class Grupo extends \Illuminate\Database\Eloquent\Model {
     public static function getPermissao($usuario, $grupo) {
         $permissao = self::join('grupo_usuario', 'grupo_usuario.id_grupo', '=', 'grupo.id')->
             where('grupo.id','=', (int) $grupo)->
+            where('grupo.status','=', 1)->
             where('grupo_usuario.id_usuario','=', (int) $usuario)->
             select('grupo_usuario.permissao')->
         get();        

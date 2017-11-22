@@ -19,7 +19,8 @@ class Sessao {
     	$grupos = \Model\Grupo::
     		join('grupo_usuario', 'grupo.id', 'grupo_usuario.id_grupo')->
     		where('grupo_usuario.id_usuario', '=', $_SESSION['id'])->
-    		where('grupo_usuario.status', '=', 1)->
+            where('grupo_usuario.status', '=', 1)->
+            where('grupo.status', '=', 1)->
     		whereIn('grupo_usuario.permissao', ['administrador', 'dono'])->
     		select('grupo.nome', 'grupo.id')->
     	get();
