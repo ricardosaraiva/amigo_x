@@ -2,11 +2,11 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">AMIGO X</a>
+    <div class="navbar-brand">AMIGO X</div>
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item {{ (titulo in 'HOME') ? 'active' : '' }}">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/">Inicio</a>
             </li>
 
             <li class="nav-item {{ (titulo in 'GRUPO') ? 'active' : '' }}" >
@@ -22,6 +22,13 @@
             </li>
         </ul>
         
+        <a href="#" class="navbar-text carrinho" onclick="carrinho(Event)">
+            <span>
+                <i class="fa fa-shopping-basket"></i>  
+                <b id="carrinhoTotalItens">0</b>
+            </span>
+        </a> 
+
         <a href="/login" class="navbar-text">
             <i class="fa fa-power-off"></i> Sair
         </a>  

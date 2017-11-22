@@ -172,3 +172,26 @@ function tr(el, tipo, tds, alinhar, attrs, adicionar) {
         $(el).children('td:eq(' + (parseInt(td)) + ')').html(tds[td]);
     }
 }
+
+
+function carrinho () {
+    $('#carrinho').trigger('reset');
+    showModal("#modalCarrinho");
+}
+
+//SMS
+function resizeSms() {
+    var h = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+
+    $("#mensagens").css('height', (h - 220));
+}
+
+$(document).ready(function () {
+    resizeSms();
+
+    $( window ).resize(function() {
+        resizeSms();
+    });
+})
