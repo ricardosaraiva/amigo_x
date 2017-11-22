@@ -1,0 +1,69 @@
+{% extends "template.html"  %}
+{% set titulo = 'GRUPO' %}
+
+
+{% block content %}
+
+<h1>Grupos</h1>
+<hr>
+
+<button class="btn btn-primary margin-bottom-15" onclick="cadastroGrupo()">Novo Grupo</button>
+
+<table class="table table-striepd">
+    <thead>
+        <tr>
+            <th width="90">Código</th>
+            <th>Nome</th>
+            <th width="140"></th>
+        </tr>
+    </thead>
+    <tbody id="grupos">
+            {% for grupo in grupos %}
+            <tr id="grupo{{grupo.id}}">
+                <td>{{grupo.id}}</td>
+                <td><a href="/grupo/{{grupo.id}}">{{grupo.nome}}</a></td>
+                <td>
+                    {%if grupo.permissao == 'dono' or grupo.permissao == 'administrador' %}
+                    <button class="btn btn-primary" onclick="cadastroGrupo('{{grupo.nome}}', '{{grupo.id}}')"><a class="fa fa-pencil"></a></button>
+                    {%endif%}
+                   
+                   {%if grupo.permissao == 'dono' %}
+                   <button class="btn btn-danger" onclick="remover('{{grupo.id}}')"><a class="fa fa-times"></a></button>
+                   {%endif%}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div class="modal fade" id="cadastroGrupo">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Cadastro de grupo</h4>
+            </div>
+            <form id="cadastroGrupo">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="nome">Nome</label>
+                            <input type="text" name="nome" id="nome" class="form-control" 
+                                maxlength="100" minlength="3" required autofocus>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="hidden" id="editarGrupo" name="editarGrupo">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Gravar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="/js/grupo.js"></script>
+{% endblock %}

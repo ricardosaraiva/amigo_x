@@ -1,0 +1,39 @@
+{% extends "template.html" %}
+{% set titulo = 'SESSÃO' %}
+
+
+{% block content %}
+
+
+<h1>Amigo X</h1>
+<hr>
+
+<button class="btn btn-primary margin-bottom-15" onclick="cadastroGrupo()">Nova Sessão</button>
+
+<table class="table table-striepd">
+    <thead>
+        <tr>
+            <th>Descrição</th>
+            <th>Local</th>
+            <th class="text-center" width="90">Data</th>
+            <th class="text-center" width="90">Horário</th>
+            <th width="140"></th>
+        </tr>
+    </thead>
+    <tbody id="sessao">
+        <tr>
+            <td>teste</td>
+            <td>teste</td>
+            <td class="text-center">10/10/2017</td>
+            <td class="text-center">10:10:10</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+
+{% endblock %}
+
+{% block script %}
+<script src="/js/sessao.js"></script>
+{% endblock %}

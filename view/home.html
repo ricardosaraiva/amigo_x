@@ -1,0 +1,46 @@
+{% extends "template.html" %}
+{% set titulo = 'HOME' %}
+
+
+{% block content %}
+
+
+<h1>Bem vindo ao AMIGO X</h1>
+<hr>
+
+<p>
+    Para pessoas que querem realizar confraternizações em datas especiais,
+    o Amigo X é um sistema web que permite um grupo de amigos realizar seus
+    sorteios de amigo secreto.
+    Diferente de realizar o sorteio manual com a presença de todas as pessoas, o
+    nosso produto realiza o sorteio automaticamente e permite que os participantes
+    troquem mensagens via web.
+</p>
+
+<div class="row"></div>
+{% if  total > 0 %}
+
+    <div class="col-md-4">
+        <div class="card card-block">
+            <h2 class="text-center margin-bottom-15">Convites de grupos</h2>
+
+            <ul class="list-group">
+                {% for grupo in grupos %}
+                    <li id="grupo{{grupo.id}}" class="list-group-item justify-content-between">
+                        {{grupo.nome}}
+                        <button class="btn btn-success" onclick="aceitarConvite({{grupo.id}})"><i class="fa fa-check"></i></button>
+                    </li>       
+                {% endfor %}   
+            </ul>         
+        </div>
+    </div>
+
+{% endif %}
+</div>
+
+
+{% endblock %}
+
+{% block script %}
+<script src="/js/home.js"></script>
+{% endblock %}

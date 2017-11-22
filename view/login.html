@@ -1,0 +1,61 @@
+{% extends "template.html" %}
+{% set titulo = 'LOGIN' %}
+
+{% block content %}
+    
+    <div class="login-formulario">
+
+        <h1 class="logo text-center">AMIGO X</h1>
+
+        <ul class="nav nav-pills nav-fill" id="menuLogin">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Logar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Registrar</a>
+            </li>
+        </ul>
+        
+        <form id="login" class="input-group-lg">
+            <h2>LOGAR</h2>
+            <hr>
+
+            <input type="email" class="form-control" id="email" name="email" placeholder="E-mail"
+                maxlength="100" required autofocus>
+
+            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary btn-lg">LOGAR</button>
+            </div>
+        </form>
+
+
+        <form id="registrar" class="input-group-lg hide">
+            <h2>REGISTRAR</h2>
+            <hr>
+
+            <input type="email" class="form-control" id="novoEmail" name="novoEmail" placeholder="E-mail" 
+                maxlength="100" required>
+
+            <input type="text" class="form-control" id="novoNome" name="novoNome" placeholder="Nome Completo"
+                maxlength="100" required>
+
+            <input type="password" class="form-control" id="novaSenha" name="novaSenha" placeholder="Senha"
+                minlength="6" maxlength="16" required>
+            
+            <input type="password" class="form-control" id="novaSenhaConfirmar" name="novaSenhaConfirmar" placeholder="Confirmar Senha"
+                minlength="6" maxlength="16" required>
+
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary btn-lg">REGISTRAR</button>
+            </div>
+        </form>
+
+    </div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="js/login.js"></script>
+{% endblock %}

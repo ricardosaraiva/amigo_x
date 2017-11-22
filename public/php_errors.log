@@ -1,0 +1,664 @@
+[20-Nov-2017 22:51:57 America/Sao_Paulo] PHP Notice:  Undefined index: usuario in /var/www/html/amigo_x/controller/Usuario.php on line 16
+[20-Nov-2017 22:51:57 America/Sao_Paulo] PHP Stack trace:
+[20-Nov-2017 22:51:57 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[20-Nov-2017 22:51:57 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:38
+[20-Nov-2017 22:51:57 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[20-Nov-2017 22:51:57 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[20-Nov-2017 22:51:57 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[20-Nov-2017 22:51:57 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[20-Nov-2017 22:51:57 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[20-Nov-2017 22:51:57 America/Sao_Paulo] PHP   8. Slim\Route->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[20-Nov-2017 22:51:57 America/Sao_Paulo] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[20-Nov-2017 22:51:57 America/Sao_Paulo] PHP  10. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[20-Nov-2017 22:51:57 America/Sao_Paulo] PHP  11. Controller\Usuario->logar() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[20-Nov-2017 23:00:30 America/Sao_Paulo] PHP Notice:  Undefined index: USER_AGENT in /var/www/html/amigo_x/controller/Usuario.php on line 41
+[20-Nov-2017 23:00:30 America/Sao_Paulo] PHP Stack trace:
+[20-Nov-2017 23:00:30 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[20-Nov-2017 23:00:30 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:40
+[20-Nov-2017 23:00:30 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[20-Nov-2017 23:00:30 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[20-Nov-2017 23:00:30 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[20-Nov-2017 23:00:30 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[20-Nov-2017 23:00:30 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[20-Nov-2017 23:00:30 America/Sao_Paulo] PHP   8. Slim\Route->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[20-Nov-2017 23:00:30 America/Sao_Paulo] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[20-Nov-2017 23:00:30 America/Sao_Paulo] PHP  10. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[20-Nov-2017 23:00:30 America/Sao_Paulo] PHP  11. Controller\Usuario->logar() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[20-Nov-2017 23:11:43 America/Sao_Paulo] PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:588
+Stack trace:
+#0 /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php(377): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php(295): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#2 /var/www/html/amigo_x/public/index.php(40): Slim\App->run()
+#3 {main}
+  thrown in /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php on line 588
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP Warning:  Missing argument 2 for Closure::{closure}(), called in /var/www/html/amigo_x/vendor/slim/slim/Slim/RouteGroup.php on line 45 and defined in /var/www/html/amigo_x/route.php on line 16
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP Stack trace:
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   2. require() /var/www/html/amigo_x/public/index.php:38
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   3. Slim\App->group() /var/www/html/amigo_x/route.php:26
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   4. Slim\RouteGroup->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:268
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   5. Closure->{closure:/var/www/html/amigo_x/route.php:16-26}() /var/www/html/amigo_x/vendor/slim/slim/Slim/RouteGroup.php:45
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP Warning:  Missing argument 3 for Closure::{closure}(), called in /var/www/html/amigo_x/vendor/slim/slim/Slim/RouteGroup.php on line 45 and defined in /var/www/html/amigo_x/route.php on line 16
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP Stack trace:
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   2. require() /var/www/html/amigo_x/public/index.php:38
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   3. Slim\App->group() /var/www/html/amigo_x/route.php:26
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   4. Slim\RouteGroup->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:268
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   5. Closure->{closure:/var/www/html/amigo_x/route.php:16-26}() /var/www/html/amigo_x/vendor/slim/slim/Slim/RouteGroup.php:45
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /var/www/html/amigo_x/route.php:16) in /var/www/html/amigo_x/controller/Usuario.php on line 37
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP Stack trace:
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:40
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   8. Slim\Route->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP  10. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP  11. Controller\Usuario->logar() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP  12. session_start() /var/www/html/amigo_x/controller/Usuario.php:37
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP Warning:  Missing argument 2 for Closure::{closure}(), called in /var/www/html/amigo_x/vendor/slim/slim/Slim/RouteGroup.php on line 45 and defined in /var/www/html/amigo_x/route.php on line 16
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP Stack trace:
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   2. require() /var/www/html/amigo_x/public/index.php:38
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   3. Slim\App->group() /var/www/html/amigo_x/route.php:26
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   4. Slim\RouteGroup->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:268
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   5. Closure->{closure:/var/www/html/amigo_x/route.php:16-26}() /var/www/html/amigo_x/vendor/slim/slim/Slim/RouteGroup.php:45
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP Warning:  Missing argument 3 for Closure::{closure}(), called in /var/www/html/amigo_x/vendor/slim/slim/Slim/RouteGroup.php on line 45 and defined in /var/www/html/amigo_x/route.php on line 16
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP Stack trace:
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   2. require() /var/www/html/amigo_x/public/index.php:38
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   3. Slim\App->group() /var/www/html/amigo_x/route.php:26
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   4. Slim\RouteGroup->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:268
+[20-Nov-2017 23:14:56 America/Sao_Paulo] PHP   5. Closure->{closure:/var/www/html/amigo_x/route.php:16-26}() /var/www/html/amigo_x/vendor/slim/slim/Slim/RouteGroup.php:45
+[20-Nov-2017 23:15:02 America/Sao_Paulo] PHP Warning:  Missing argument 2 for Closure::{closure}(), called in /var/www/html/amigo_x/vendor/slim/slim/Slim/RouteGroup.php on line 45 and defined in /var/www/html/amigo_x/route.php on line 16
+[20-Nov-2017 23:15:02 America/Sao_Paulo] PHP Stack trace:
+[20-Nov-2017 23:15:02 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[20-Nov-2017 23:15:02 America/Sao_Paulo] PHP   2. require() /var/www/html/amigo_x/public/index.php:38
+[20-Nov-2017 23:15:02 America/Sao_Paulo] PHP   3. Slim\App->group() /var/www/html/amigo_x/route.php:26
+[20-Nov-2017 23:15:02 America/Sao_Paulo] PHP   4. Slim\RouteGroup->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:268
+[20-Nov-2017 23:15:02 America/Sao_Paulo] PHP   5. Closure->{closure:/var/www/html/amigo_x/route.php:16-26}() /var/www/html/amigo_x/vendor/slim/slim/Slim/RouteGroup.php:45
+[20-Nov-2017 23:15:02 America/Sao_Paulo] PHP Warning:  Missing argument 3 for Closure::{closure}(), called in /var/www/html/amigo_x/vendor/slim/slim/Slim/RouteGroup.php on line 45 and defined in /var/www/html/amigo_x/route.php on line 16
+[20-Nov-2017 23:15:02 America/Sao_Paulo] PHP Stack trace:
+[20-Nov-2017 23:15:02 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[20-Nov-2017 23:15:02 America/Sao_Paulo] PHP   2. require() /var/www/html/amigo_x/public/index.php:38
+[20-Nov-2017 23:15:02 America/Sao_Paulo] PHP   3. Slim\App->group() /var/www/html/amigo_x/route.php:26
+[20-Nov-2017 23:15:02 America/Sao_Paulo] PHP   4. Slim\RouteGroup->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:268
+[20-Nov-2017 23:15:02 America/Sao_Paulo] PHP   5. Closure->{closure:/var/www/html/amigo_x/route.php:16-26}() /var/www/html/amigo_x/vendor/slim/slim/Slim/RouteGroup.php:45
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP Notice:  Undefined variable: response in /var/www/html/amigo_x/route.php on line 19
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP Stack trace:
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:40
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP  16. Closure->{closure:/var/www/html/amigo_x/route.php:18-20}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[20-Nov-2017 23:22:31 America/Sao_Paulo] PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:588
+Stack trace:
+#0 /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php(377): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php(295): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#2 /var/www/html/amigo_x/public/index.php(40): Slim\App->run()
+#3 {main}
+  thrown in /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php on line 588
+[20-Nov-2017 23:38:47 America/Sao_Paulo] PHP Notice:  Undefined variable: loader in /var/www/html/amigo_x/public/index.php on line 29
+[20-Nov-2017 23:38:47 America/Sao_Paulo] PHP Stack trace:
+[20-Nov-2017 23:38:47 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[20-Nov-2017 23:38:47 America/Sao_Paulo] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Twig_Environment::__construct() must be an instance of Twig_LoaderInterface, null given, called in /var/www/html/amigo_x/public/index.php on line 29 and defined in /var/www/html/amigo_x/vendor/twig/twig/lib/Twig/Environment.php:84
+Stack trace:
+#0 /var/www/html/amigo_x/public/index.php(29): Twig_Environment->__construct(NULL)
+#1 {main}
+  thrown in /var/www/html/amigo_x/vendor/twig/twig/lib/Twig/Environment.php on line 84
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP Notice:  Undefined variable: loader in /var/www/html/amigo_x/public/index.php on line 23
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP Stack trace:
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:48
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP   8. Slim\Route->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP   9. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP  10. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP  11. Closure->{closure:/var/www/html/amigo_x/route.php:4-9}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP  12. Slim\Container->__get() /var/www/html/amigo_x/route.php:8
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP  13. Slim\Container->get() /var/www/html/amigo_x/vendor/slim/slim/Slim/Container.php:172
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP  14. Pimple\Container->offsetGet() /var/www/html/amigo_x/vendor/slim/slim/Slim/Container.php:123
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP  15. {closure:/var/www/html/amigo_x/public/index.php:18-36}() /var/www/html/amigo_x/vendor/pimple/pimple/src/Pimple/Container.php:118
+[20-Nov-2017 23:58:49 America/Sao_Paulo] PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:588
+Stack trace:
+#0 /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php(377): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php(295): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#2 /var/www/html/amigo_x/public/index.php(48): Slim\App->run()
+#3 {main}
+  thrown in /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php on line 588
+[21-Nov-2017 00:01:40 America/Sao_Paulo] PHP Notice:  Undefined variable: this in /var/www/html/amigo_x/public/index.php on line 29
+[21-Nov-2017 00:01:40 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 00:01:40 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 00:01:40 America/Sao_Paulo] PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:588
+Stack trace:
+#0 /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php(377): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php(295): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#2 /var/www/html/amigo_x/public/index.php(41): Slim\App->run()
+#3 {main}
+  thrown in /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php on line 588
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP Notice:  Undefined index: novoNome in /var/www/html/amigo_x/controller/Grupo.php on line 17
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 01:46:12 America/Sao_Paulo] PHP  16. Controller\Grupo->add() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP Warning:  Missing argument 1 for Model\Grupo::getPermissao(), called in /var/www/html/amigo_x/controller/Grupo.php on line 96 and defined in /var/www/html/amigo_x/model/Grupo.php on line 7
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  16. Controller\Grupo->del() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  17. Model\Grupo::getPermissao() /var/www/html/amigo_x/controller/Grupo.php:96
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP Warning:  Missing argument 2 for Model\Grupo::getPermissao(), called in /var/www/html/amigo_x/controller/Grupo.php on line 96 and defined in /var/www/html/amigo_x/model/Grupo.php on line 7
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  16. Controller\Grupo->del() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  17. Model\Grupo::getPermissao() /var/www/html/amigo_x/controller/Grupo.php:96
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP Notice:  Undefined variable: grupo in /var/www/html/amigo_x/model/Grupo.php on line 9
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  16. Controller\Grupo->del() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  17. Model\Grupo::getPermissao() /var/www/html/amigo_x/controller/Grupo.php:96
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP Notice:  Undefined variable: usuario in /var/www/html/amigo_x/model/Grupo.php on line 10
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  16. Controller\Grupo->del() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:25:57 America/Sao_Paulo] PHP  17. Model\Grupo::getPermissao() /var/www/html/amigo_x/controller/Grupo.php:96
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP Warning:  Missing argument 1 for Model\Grupo::getPermissao(), called in /var/www/html/amigo_x/controller/Grupo.php on line 96 and defined in /var/www/html/amigo_x/model/Grupo.php on line 7
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  16. Controller\Grupo->del() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  17. Model\Grupo::getPermissao() /var/www/html/amigo_x/controller/Grupo.php:96
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP Warning:  Missing argument 2 for Model\Grupo::getPermissao(), called in /var/www/html/amigo_x/controller/Grupo.php on line 96 and defined in /var/www/html/amigo_x/model/Grupo.php on line 7
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  16. Controller\Grupo->del() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  17. Model\Grupo::getPermissao() /var/www/html/amigo_x/controller/Grupo.php:96
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP Notice:  Undefined variable: grupo in /var/www/html/amigo_x/model/Grupo.php on line 9
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  16. Controller\Grupo->del() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  17. Model\Grupo::getPermissao() /var/www/html/amigo_x/controller/Grupo.php:96
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP Notice:  Undefined variable: usuario in /var/www/html/amigo_x/model/Grupo.php on line 10
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  16. Controller\Grupo->del() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:26:37 America/Sao_Paulo] PHP  17. Model\Grupo::getPermissao() /var/www/html/amigo_x/controller/Grupo.php:96
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP Notice:  Undefined index: novoNome in /var/www/html/amigo_x/controller/Grupo.php on line 73
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 02:39:55 America/Sao_Paulo] PHP  16. Controller\Grupo->edit() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP Notice:  Undefined variable: usaurio in /var/www/html/amigo_x/controller/Grupo.php on line 212
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 20:49:49 America/Sao_Paulo] PHP  16. Controller\Grupo->convidar() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP Notice:  Undefined variable: usaurio in /var/www/html/amigo_x/controller/Grupo.php on line 212
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 20:50:04 America/Sao_Paulo] PHP  16. Controller\Grupo->convidar() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP Notice:  Undefined variable: grupo in /var/www/html/amigo_x/controller/Grupo.php on line 173
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 21:59:30 America/Sao_Paulo] PHP  16. Controller\Grupo->participanteRemover() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP Notice:  Undefined variable: grupo in /var/www/html/amigo_x/controller/Grupo.php on line 254
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP  16. Controller\Grupo->permissao() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP Notice:  Undefined index: permissao in /var/www/html/amigo_x/controller/Grupo.php on line 261
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 22:17:51 America/Sao_Paulo] PHP  16. Controller\Grupo->permissao() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP Notice:  Undefined variable: grupo in /var/www/html/amigo_x/controller/Grupo.php on line 254
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 22:18:34 America/Sao_Paulo] PHP  16. Controller\Grupo->permissao() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP Notice:  Undefined variable: container in /var/www/html/amigo_x/controller/Home.php on line 28
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 22:36:08 America/Sao_Paulo] PHP  16. Controller\Home->index() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP Notice:  Undefined variable: mail in /var/www/html/amigo_x/controller/Home.php on line 33
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP  16. Controller\Home->index() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 22:55:30 America/Sao_Paulo] PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:588
+Stack trace:
+#0 /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php(377): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php(295): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#2 /var/www/html/amigo_x/public/index.php(44): Slim\App->run()
+#3 {main}
+  thrown in /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php on line 588
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP Notice:  Undefined variable: mail in /var/www/html/amigo_x/controller/Home.php on line 33
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP  16. Controller\Home->index() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 22:55:32 America/Sao_Paulo] PHP Fatal error:  Uncaught RuntimeException: Unexpected data in output buffer. Maybe you have characters before an opening <?php tag? in /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:588
+Stack trace:
+#0 /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php(377): Slim\App->finalize(Object(Slim\Http\Response))
+#1 /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php(295): Slim\App->process(Object(Slim\Http\Request), Object(Slim\Http\Response))
+#2 /var/www/html/amigo_x/public/index.php(44): Slim\App->run()
+#3 {main}
+  thrown in /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php on line 588
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP Notice:  Undefined variable: usuarioDados in /var/www/html/amigo_x/controller/Grupo.php on line 257
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP  16. Controller\Grupo->convidar() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP Notice:  Trying to get property of non-object in /var/www/html/amigo_x/controller/Grupo.php on line 257
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 23:09:52 America/Sao_Paulo] PHP  16. Controller\Grupo->convidar() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP Notice:  Undefined variable: id in /var/www/html/amigo_x/controller/Grupo.php on line 302
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 23:53:06 America/Sao_Paulo] PHP  16. Controller\Grupo->aceitarConvite() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP Notice:  Undefined variable: id in /var/www/html/amigo_x/controller/Grupo.php on line 302
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP Stack trace:
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[21-Nov-2017 23:53:10 America/Sao_Paulo] PHP  16. Controller\Grupo->aceitarConvite() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP Notice:  Undefined variable: grupos in /var/www/html/amigo_x/controller/Sessao.php on line 21
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP Stack trace:
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP  16. Controller\Sessao->index() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP Notice:  Undefined variable: grupos in /var/www/html/amigo_x/controller/Sessao.php on line 22
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP Stack trace:
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[22-Nov-2017 00:08:03 America/Sao_Paulo] PHP  16. Controller\Sessao->index() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP Notice:  Undefined variable: grupos in /var/www/html/amigo_x/controller/Sessao.php on line 21
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP Stack trace:
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP  16. Controller\Sessao->index() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP Notice:  Undefined variable: grupos in /var/www/html/amigo_x/controller/Sessao.php on line 22
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP Stack trace:
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   1. {main}() /var/www/html/amigo_x/public/index.php:0
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   2. Slim\App->run() /var/www/html/amigo_x/public/index.php:44
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   3. Slim\App->process() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:295
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   4. Slim\App->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:370
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   5. Slim\App->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   6. Slim\Route->run() /var/www/html/amigo_x/vendor/slim/slim/Slim/App.php:479
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   7. Slim\Route->callMiddlewareStack() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:316
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   8. Slim\Route->Slim\{closure}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP   9. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70}() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP  10. Slim\DeferredCallable->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:70
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP  11. call_user_func_array:{/var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43}() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP  12. Middleware\Autenticar->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/DeferredCallable.php:43
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP  13. Slim\Route->__invoke() /var/www/html/amigo_x/middleware/Autenticar.php:18
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP  14. Slim\Handlers\Strategies\RequestResponse->__invoke() /var/www/html/amigo_x/vendor/slim/slim/Slim/Route.php:344
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP  15. call_user_func:{/var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[22-Nov-2017 00:08:12 America/Sao_Paulo] PHP  16. Controller\Sessao->index() /var/www/html/amigo_x/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41

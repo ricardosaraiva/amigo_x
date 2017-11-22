@@ -1,0 +1,127 @@
+{% extends "template.html"  %}
+{% set titulo = 'GRUPO' %}
+
+
+{% block content %}
+
+<h1>Grupo : {{codigo}} - {{nome}} </h1>
+<hr>
+
+{% if permissao == 'dono' or permissao == 'administrador' %}
+    <div class="row">
+        <div class="col-md-10">
+            <input type="text" class="form-control" id="filtroNome" name="filtroNome" placeholder="Buscar participante por: nome / e-mail">
+        </div>
+        <div class="col-md-2">
+            <input type="hidden" id="grupoId" value="{{codigo}}">
+            <button class="btn btn-primary form-control"><i class="fa fa-search"></i> Buscar</button>
+        </div>
+    </div>
+
+    
+
+    <div class="margin-bottom-30"></div>
+{% endif %}
+
+<table class="table table-striepd">
+    <thead>
+        <tr>
+            <th>Participante</th>
+            <th>E-mail</th>
+            <th class="text-center">Nivel</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="participantes">
+        {% for usuario in usuarios %}
+            <tr class="{{usuario.status == 0 ? 'aguardando' : ''}}" id="tr{{usuario.id}}">
+                <td>{{usuario.nome}} {{usuario.status == 0 ? '(Convidado)' : ''}}</td>
+                <td>{{usuario.email}}</td>
+                <td class="text-center">{{usuario.permissao  == 'dono' ? 'administrador' : usuario.permissao}}</td>
+                <td class="text-center">
+                    {% if permissao == 'dono' and usuario.id != id %}
+                        <button class="btn btn-primary" onclick="editarParticipante({{usuario.id}})"><i class="fa fa-pencil"></i></button>
+                    {% elseif permissao  == 'administrador' and usuario.permissao == 'participante' and usuario.id != id %}
+                        <button class="btn btn-primary" onclick="editarParticipante({{usuario.id}})"><i class="fa fa-pencil"></i></button>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% if permissao != 'dono' %}
+    <div class="row margin-top-30">
+        <div class="col-md-12 text-center">
+            <button class="btn btn-danger" onclick="sair({{codigo}})">Sair do grupo</button>        
+        </div>
+    </div>
+{% endif %}
+
+
+<div class="modal fade" id="modalParticipante">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Editar participante</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row margin-bottom-15">
+                    <div class="col-md-12">
+                        <button class="btn btn-danger" onclick="removerParticipante()">Remover participante</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="">Nome</label>
+                        <input type="text" id="nome" class="form-control" disabled>
+                        <input type="hidden" id="codigo" class="form-control" disabled>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="">E-mail</label>
+                        <input type="text" id="email" class="form-control" disabled>
+                    </div>
+                </div>
+
+                {% if permissao == 'dono' and usuario.id != id %}
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="">Nivel</label>
+                        <select name="permissao" id="permissao" class="form-control">
+                            <option value="participante">Participante</option>
+                            <option value="administrador">Administrador</option>
+                        </select>
+                    </div>
+                </div>
+                {% else %}
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="">Nivel</label>
+                            <input type="text" id="permissao" value="Participante" class="form-control" disabled>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+            {% if permissao == 'dono' and usuario.id != id %}
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="permissaoParticipante()">Gravar</button>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block script %}
+
+    <script src="/js/grupo.js"></script>
+{% endblock %}
