@@ -16,7 +16,16 @@ class Sessao {
     }
     
     public function index(Request $request, Response $response) {
+    	$grupos = \Model\Grupo::
+    		join('grupo_usuario', 'grupo.id', 'grupo_usuario.id_grupo')->
+    		where('grupo_usuario.id_usuario', '=', $_SESSION['id'])->
+    		where('grupo_usuario.status', '=', 1)->
+    		whereIn('grupo_usuario.permissao', ['administrador', 'dono'])->
+    		select('grupo.nome', 'grupo.id')->
+    	get();
 
-        $this->c['view']->render($response, 'sessao.html');
+        $this->c['view']->render($response, 'sessao.html', [
+        	'grupos' => $grupos
+        ]);
     }
 }

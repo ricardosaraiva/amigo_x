@@ -2,6 +2,15 @@ $('input').on('change', function () {
     $(this).removeClass('inputErroAjax');
 });
 
+$(".table tbody").delegate('tr.link button, tr.link a', 'click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+});
+
+$(".table tbody").delegate('tr.link', 'click', function() {
+    window.location = $(this).data("href");
+});
+
 function ajax(param) {
     preload();
     var ajax = {

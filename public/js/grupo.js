@@ -20,17 +20,22 @@ $('#cadastroGrupo').submit(function (e) {
         success: function (json) {
             $('#cadastroGrupo').modal("hide");
             var remover = (json.permissao == 'dono') ? 
-                '<button class="btn btn-danger" onclick="remover('+json.codigo+')"><a class="fa fa-times"></a></button>' : '';
+                '<button class="btn btn-danger" onclick="remover('+json.codigo+')"><i class="fa fa-times"></i></button>' : '';
             
             var el = (url == 'add') ? '#grupos' : '#grupo' + data.id;
             var funcao = (url == 'add' ? 'novo' : 'editar');
             
             tr(el, funcao, [
                 json.codigo,
-                '<a href="/grupo/'+json.coigo+'">'+ json.nome + '</a>',
+                json.nome ,
                 '<button class="btn btn-primary"  onclick="cadastroGrupo(\'' + json.nome + '\', \'' + json.codigo + '\')"><a class="fa fa-pencil"></a></button> ' +
                 remover
-            ], ['l','l','l'], {id: 'grupo' + json.codigo});
+            ], ['l','l','l'], 
+            {
+                id: 'grupo' + json.codigo,
+                class : "link",
+                'data-href' : '/grupo/'+ json.codigo
+            });
 
             retornoOperacaoSucesso('Registro cadastrado com sucesso!');
         }

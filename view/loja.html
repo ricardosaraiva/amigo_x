@@ -1,0 +1,109 @@
+{% extends "template.html" %}
+{% set titulo = 'LOJA' %}
+
+
+{% block content %}
+
+
+<h1>Loja</h1>
+<hr>
+
+
+<div class="card-columns">
+    
+    {% for produto in produtos %}
+        <div class="card">
+            <img class="card-img-top img-fluid" src="/produtos/{{produto.img}}">
+            <div class="card-block">
+                <h4 class="card-title">{{produto.titulo}}</h4>
+                <p class="card-text">R$: {{produto.valor|number_format(2, ',', '.')}}</p>
+                <div class="text-center">
+                    <input type="number" name="qtd" class="form-control" maxlength="1" max="5" onKeyDown="if(this.value.length==1 && event.keyCode!=8) return false;" >
+                    <button class="btn btn-success">Comprar</button>
+                </div>
+            </div>
+      </div>   
+    {% endfor %}
+
+</div>
+
+
+<div class="card margin-bottom-30 margin-top-30" id="pedido">
+    <div class="card-block">
+        <h2>Pedido</h2>
+        <table class="table table-striepd">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+        </table>
+
+        <h3 class="margin-bottom-15 margin-top-15">Endereço</h3>
+
+        <div class="row">
+            <div class="col-md-3">
+                <label for="cep">CEP</label>
+                <input type="text" class="form-control" id="cep">
+            </div>
+
+            <div class="col-md-7">
+                <label for="rua">Rua</label>
+                <input type="text" class="form-control" id="rua">
+            </div>
+
+            <div class="col-md-2">
+                <label for="numero">Nº</label>
+                <input type="text" class="form-control" id="numero">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label for="cep">Complemento</label>
+                <input type="text" class="form-control" id="complemento">
+            </div>
+
+            <div class="col-md-6">
+                <label for="cep">Cidade</label>
+                <input type="text" class="form-control" id="cidade">
+            </div>
+
+            <div class="col-md-2">
+                <label for="cep">UF</label>
+                <input type="text" class="form-control" id="uf" maxlength="2">
+            </div>
+        </div>
+
+        <h3 class="margin-bottom-15 margin-top-15">Pagamento</h3>
+
+        <div class="row">
+
+            <div class="col-md-5">
+                <label for="cartao">Cartão</label>
+                <input type="text" class="form-control" id="cartao">
+            </div>
+
+            <div class="col-md-4">
+                <label for="cpf">CPF</label>
+                <input type="text" class="form-control" id="cpf">
+            </div>
+
+            <div class="col-md-3">
+                <label for="cep">Cód. de segurança</label>
+                <input type="text" class="form-control" id="uf" maxlength="2">
+            </div>
+        </div>        
+
+        <button class="btn btn-primary">Finalizar Pedido</button>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block script %}
+<script src="/js/loja.js"></script>
+{% endblock %}

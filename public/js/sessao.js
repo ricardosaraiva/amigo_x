@@ -1,0 +1,3 @@
+function cadastroSessao() {
+	showModal('#modalSessao');
+}

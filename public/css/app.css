@@ -15,8 +15,26 @@ h2 {
     font-size: 18px;
 }
 
+h3 {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+}
+
 input {
     margin-bottom: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.table tr.link {
+    cursor: pointer;
 }
 
 .navbar {
@@ -31,12 +49,12 @@ input {
     margin-bottom: 15px;
 }
 
-.margin-top-30{
-    margin-top: 30px;
-}
-
 .margin-bottom-30{
     margin-bottom: 30px;
+}
+
+.margin-top-15{
+    margin-top: 15px;
 }
 
 #msgModalAlerta  .msg {
@@ -115,3 +133,16 @@ h1.login {
 }
 
 /* GRUPO */
+
+
+/* LOJA */
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 3;
+  }
+ 
+  @include media-breakpoint-only(xl) {
+    column-count: 3;
+  }
+}
+/* LOJA */

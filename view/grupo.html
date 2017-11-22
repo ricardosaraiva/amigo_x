@@ -9,7 +9,7 @@
 
 <button class="btn btn-primary margin-bottom-15" onclick="cadastroGrupo()">Novo Grupo</button>
 
-<table class="table table-striepd">
+<table class="table table-striepd table-hover">
     <thead>
         <tr>
             <th width="90">Código</th>
@@ -19,16 +19,16 @@
     </thead>
     <tbody id="grupos">
             {% for grupo in grupos %}
-            <tr id="grupo{{grupo.id}}">
+            <tr class="link" id="grupo{{grupo.id}}" data-href="/grupo/{{grupo.id}}">
                 <td>{{grupo.id}}</td>
-                <td><a href="/grupo/{{grupo.id}}">{{grupo.nome}}</a></td>
+                <td>{{grupo.nome}}</td>
                 <td>
                     {%if grupo.permissao == 'dono' or grupo.permissao == 'administrador' %}
-                    <button class="btn btn-primary" onclick="cadastroGrupo('{{grupo.nome}}', '{{grupo.id}}')"><a class="fa fa-pencil"></a></button>
+                    <button class="btn btn-primary" onclick="cadastroGrupo('{{grupo.nome}}', '{{grupo.id}}')"><i class="fa fa-pencil"></i></button>
                     {%endif%}
                    
                    {%if grupo.permissao == 'dono' %}
-                   <button class="btn btn-danger" onclick="remover('{{grupo.id}}')"><a class="fa fa-times"></a></button>
+                   <button class="btn btn-danger" onclick="remover('{{grupo.id}}')"><i class="fa fa-times"></i></button>
                    {%endif%}
                 </td>
             </tr>

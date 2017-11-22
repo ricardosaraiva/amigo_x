@@ -8,7 +8,7 @@
 <h1>Amigo X</h1>
 <hr>
 
-<button class="btn btn-primary margin-bottom-15" onclick="cadastroGrupo()">Nova Sessão</button>
+<button class="btn btn-primary margin-bottom-15" onclick="cadastroSessao()">Nova Sessão</button>
 
 <table class="table table-striepd">
     <thead>
@@ -21,15 +21,80 @@
         </tr>
     </thead>
     <tbody id="sessao">
-        <tr>
+       <!--  <tr>
             <td>teste</td>
             <td>teste</td>
             <td class="text-center">10/10/2017</td>
             <td class="text-center">10:10:10</td>
             <td></td>
-        </tr>
+        </tr> -->
     </tbody>
 </table>
+
+<div class="modal fade" id="modalSessao">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Nova sessão de amigo x</h4>
+            </div>
+
+            <form id="novaSessao">
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="descricao">Descrição</label>
+                            <input type="text" class="form-control" id="descricao" name="descricao"
+                                minlength="6" maxlength="100" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="grupo">Grupo</label>
+                            <select name="grupo" id="grupo" class="form-control">
+                                <option>Selecionar</option>
+                                {% for grupo in grupos %}
+                                    <option value="{{grupo.id}}">{{grupo.nome}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="data">Data</label>
+                            <input type="datetime-local" name="data" id="data" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="local">Local</label>
+                            <textarea class="form-control" id="local" name="local"
+                                maxlength="150"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="obs">Observação</label>
+                            <textarea class="form-control" id="obs" name="obs"
+                                maxlength="255"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Gerar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
 
 
 {% endblock %}

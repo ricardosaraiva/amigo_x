@@ -147,7 +147,7 @@ class Grupo {
             orderBy('grupo_usuario.permissao')->
         get();
 
-        $this->c['view']->render($response, 'visualizar.html',[
+        $this->c['view']->render($response, 'grupo_visualizar.html',[
             'id' => $_SESSION['id'],
             'codigo' => $grupos[0]->id,
             'nome' => $grupos[0]->nome,

@@ -13,7 +13,6 @@ $app->post('/usuario/registrar', 'Controller\Usuario:add');
 $app->post('/usuario/login', 'Controller\Usuario:logar');
 
 
-
 $app->group('/', function () use ($app) {
     
     //pagina inicial
@@ -35,5 +34,8 @@ $app->group('/', function () use ($app) {
 
     //sessões
     $app->get('sessao', 'Controller\Sessao:index');
+
+    //loja
+    $app->get('loja', 'Controller\Loja:index');
 
 })->add(new Middleware\Autenticar);
