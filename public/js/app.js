@@ -173,14 +173,27 @@ function tr(el, tipo, tds, alinhar, attrs, adicionar) {
     }
 }
 
+function moeda(valor, casas) {
+    valor = ( isNaN(valor) ) ? 0.00 : valor;
 
-function carrinho () {
-    $('#carrinho').trigger('reset');
-    showModal("#modalCarrinho");
+    /*formatando as casa decimais*/
+    valor = parseFloat(valor);
+    valor = valor.toFixed(casas);
+
+    valor = valor.replace('.', ',');
+    valor = valor.replace(/^((-{1})?[0-9]{1,3})([0-9]{3}[,]{1}[0-9]*)$/, '$1.$3');
+    /*numero com ate 6 digitos depois da casa decimal*/
+    valor = valor.replace(/^((-{1})?[0-9]{1,3})([0-9]{3})([0-9]{3}[,]{1}[0-9]*)$/, '$1.$3.$4');
+    /*numero com ate 9 digitos depois da casa decimal*/
+    valor = valor.replace(/^((-{1})?[0-9]{1,3})([0-9]{3})([0-9]{3})([0-9]{3}[,]{1}[0-9]*)$/, '$1.$3.$4.$5');
+    /*numero com ate 12 digitos depois da casa decimal*/
+
+    return valor;
 }
 
+
 //SMS
-function resizeSms() {
+function resizeMsg() {
     var h = window.innerHeight
         || document.documentElement.clientHeight
         || document.body.clientHeight;
@@ -189,9 +202,9 @@ function resizeSms() {
 }
 
 $(document).ready(function () {
-    resizeSms();
+    resizeMsg();
 
     $( window ).resize(function() {
-        resizeSms();
+        resizeMsg();
     });
 })
