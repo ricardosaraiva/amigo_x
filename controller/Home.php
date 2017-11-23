@@ -22,9 +22,16 @@ class Home {
             where('grupo.status','=', 1)->
         get();
 
+        $sessao = \Model\Sessao::
+            join('grupo_usuario', 'grupo_usuario.id_grupo','=','sessao.id_grupo')->
+            where('sessao.status','=','1')->
+            where('grupo_usuario.id_usuario','=',$_SESSION['id'])->
+            select('sessao.id', 'sessao.descricao', 'sessao.data', 'grupo_usuario.permissao')->
+        get();
+
         $this->c['view']->render($response, 'home.html',[
             'grupos' => $grupos,
-            'total' => count($grupos)
+            'sessoes' => $sessao
         ]);
     }
 }

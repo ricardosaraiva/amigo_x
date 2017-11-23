@@ -1,0 +1,39 @@
+{% extends "template.html"  %}
+{% set titulo = 'SESSÃO' %}
+
+
+{% block content %}
+
+<h1>{{codigo}} - {{descricao}} </h1>
+<hr>
+
+<b>Data:</b> {{data}} <br>
+<b>Local:</b> {{local}} <br>
+<b>Obs:</b> {{obs}} <br>
+
+<div class="margin-bottom-30"></div>
+
+
+<div class="alert alert-success amigo-nome">
+    <strong>Seu amigo x: </strong> {{amigo}}
+</div>
+
+
+<div class="margin-bottom-30"></div>
+
+<h2>Partipantes</h2>
+<hr>
+
+<ol>
+    {% for participante in participantes %}
+        <li>{{participante.nome}}</li>
+    {% endfor %}
+</ol>
+
+
+{% endblock %}
+
+{% block script %}
+
+    <script src="/js/sessao.js"></script>
+{% endblock %}

@@ -32,6 +32,7 @@ CREATE TABLE grupo_usuario (
 CREATE TABLE sessao (
     id INT(11) PRIMARY KEY auto_increment,
     id_usuario INT(11) NOT NULL DEFAULT 0,
+    id_grupo INT(11),
     descricao VARCHAR(100),
     local VARCHAR(150),
     data DATETIME,
@@ -45,19 +46,18 @@ CREATE TABLE sessao_usuario (
     id INT(11) PRIMARY KEY auto_increment,
     id_sessao INT(11),
     id_usuario INT(11),
-    created_at DATETIME,
-    updated_at DATETIME
-) ENGINE = INNODB;
-
-
-CREATE TABLE sessao_sorteio (
-    id INT(11) PRIMARY KEY auto_increment,
-    id_sessao INT(11),
-    id_usuario INT(11),
     id_amigo_secreto INT(11),
     created_at DATETIME,
     updated_at DATETIME
 ) ENGINE = INNODB;
+
+CREATE TABLE sessao_chat (
+	id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    id_sessao INT(11),
+    id_usuario INT(11),
+    msg MEDIUMTEXT,
+    created_at DATETIME
+) ENGINE = ARCHIVE;
 
 CREATE TABLE produtos (
     id INT(11) PRIMARY KEY auto_increment,
@@ -67,9 +67,10 @@ CREATE TABLE produtos (
 ) ENGINE = INNODB;
 
 
+
 INSERT INTO `produtos` VALUES 
 (1,'Caneca super mario','caneca_mario.jpg',25.00),
 (2,'Colar camera','colar_camera.jpg',50.00),
-(3,'Colar oração Zelda','colar_zelda.jpg',50.00),
+(3,'Colar coração Zelda','colar_zelda.jpg',50.00),
 (4,'Boneco Homen de Ferro','homen_de_ferro.jpg',55.00),
 (5,'Boneco Yoda','yoda.jpg',60.00);

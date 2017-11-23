@@ -34,6 +34,9 @@ $app->group('/', function () use ($app) {
 
     //sessões
     $app->get('sessao', 'Controller\Sessao:index');
+    $app->post('sessao/add', 'Controller\Sessao:add');
+    $app->post('sessao/del', 'Controller\Sessao:del');
+    $app->get('sessao/{id}', 'Controller\Sessao:visualizar');
 
     //loja
     $app->get('loja', 'Controller\Loja:index');

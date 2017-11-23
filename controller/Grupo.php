@@ -43,16 +43,10 @@ class Grupo {
             ], 400);
         }
 
-        //validar se o nome do grupo não existe
-        $validarGrupo = \Model\Grupo::
-            where('nome', '=', strip_tags(trim($dados['nome'])) )->
-            select('id')->
-        get();
-
         if(isset($validarGrupo[0]->id)) {
             return $response->withJson(
                 [
-                    'nome' => 'Já existe um grupo com este nome!'
+                    'nome' => 'Você já criou um grupo com este nome!'
             ], 400); 
         }
 
@@ -206,7 +200,7 @@ class Grupo {
         $filtro = $request->getParam('filtro');        
         $grupo = $request->getParam('grupo');    
         
-        //valida se o usaurario tem acesso para fitlrar 
+        //valida se o usuario tem acesso para fitlrar 
         $permissao = \Model\Grupo::getPermissao($_SESSION['id'],$grupo);
         if(!in_array($permissao, ['dono', 'administrador'])) {
             return $response->withJson([]);    

@@ -92,7 +92,7 @@ class Usuario {
 
 
         $usuario = new \Model\Usuario;
-        $usuario->nome  = $dados['novoNome'];
+        $usuario->nome  = strip_tags($dados['novoNome']);
         $usuario->email  = $dados['novoEmail'];
         $usuario->senha  = password_hash($dados['novaSenha'], PASSWORD_DEFAULT);
         $usuario->save();

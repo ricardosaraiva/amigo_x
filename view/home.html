@@ -18,7 +18,7 @@
 </p>
 
 <div class="row"></div>
-{% if  total > 0 %}
+{% if grupo|length > 0 %}
 
     <div class="col-md-4">
         <div class="card card-block">
@@ -28,7 +28,29 @@
                 {% for grupo in grupos %}
                     <li id="grupo{{grupo.id}}" class="list-group-item justify-content-between">
                         {{grupo.nome}}
-                        <button class="btn btn-success" onclick="aceitarConvite({{grupo.id}})"><i class="fa fa-check"></i></button>
+                        <button class="btn btn-success" onclick="aceitarConvite({{grupo.id}})">
+                            <i class="fa fa-check"></i>
+                        </button>
+                    </li>       
+                {% endfor %}   
+            </ul>         
+        </div>
+    </div>
+
+{% endif %}
+
+{% if sessoes|length > 0 %}
+
+    <div class="col-md-4">
+        <div class="card card-block">
+            <h2 class="text-center margin-bottom-15">Amigo X</h2>
+
+            <ul class="list-group">
+                {% for sessao in sessoes %}
+                    <li id="grupo{{grupo.id}}" class="list-group-item justify-content-between">
+                        <a href="sessao/{{sessao.id}}">
+                            {{sessao.id}} - {{sessao.descricao}}    
+                        </a>
                     </li>       
                 {% endfor %}   
             </ul>         

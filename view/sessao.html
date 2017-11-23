@@ -10,24 +10,30 @@
 
 <button class="btn btn-primary margin-bottom-15" onclick="cadastroSessao()">Nova Sessão</button>
 
-<table class="table table-striepd">
+<table class="table table-striepd table-hover">
     <thead>
         <tr>
+            <th width="90px" class="text-center">Código</th>
             <th>Descrição</th>
-            <th>Local</th>
-            <th class="text-center" width="90">Data</th>
-            <th class="text-center" width="90">Horário</th>
-            <th width="140"></th>
+            <th class="text-center" width="160px">Data</th>
+            <th width="80"></th>
         </tr>
     </thead>
     <tbody id="sessao">
-       <!--  <tr>
-            <td>teste</td>
-            <td>teste</td>
-            <td class="text-center">10/10/2017</td>
-            <td class="text-center">10:10:10</td>
-            <td></td>
-        </tr> -->
+       {% for sessao in sessoes %}
+            <tr id="sessao{{sessao.id}}" class="link" data-href="sessao/{{sessao.id}}">
+                <td class="text-center">{{sessao.id}}</td>
+                <td>{{sessao.descricao}}</td>
+                <td>{{sessao.data|date('d/m/Y h:i')}}</td>
+                <td>
+                    {% if sessao.permisao == 'administrador' or sessao.permisao == 'dono' %}
+                        <button class="btn btn-danger" onclick="cancelar({{sessao.id}})">
+                            <i class="fa fa-times"></i>
+                        </button>
+                    {% endif %}
+                </td>
+            </tr>
+       {% endfor %}
     </tbody>
 </table>
 
@@ -40,6 +46,12 @@
 
             <form id="novaSessao">
                 <div class="modal-body">
+
+                    <div class="alert alert-danger">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        Só será exibido grupos com 3 ou mais participantes que aceitarão o convite!
+                    </div>
+        
 
                     <div class="row">
                         <div class="col-md-12">
@@ -64,7 +76,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <label for="data">Data</label>
-                            <input type="datetime-local" name="data" id="data" class="form-control">
+                            <input type="datetime-local" name="data" id="data" class="form-control" required>
                         </div>
                     </div>
 
@@ -78,7 +90,7 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <label for="obs">Observação</label>
+                            <label for="obs">Observações</label>
                             <textarea class="form-control" id="obs" name="obs"
                                 maxlength="255"></textarea>
                         </div>
