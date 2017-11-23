@@ -3,8 +3,8 @@
 namespace Controller;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
-use  Illuminate\Database\Capsule\Manager as DB;
 
+use  Illuminate\Database\Capsule\Manager as DB;
 use Respect\Validation\Validator;
 use Model\GrupoUsuario;
 use Helpers\Email;
@@ -36,18 +36,31 @@ class Grupo {
         
         $dados = $request->getParsedBody();
 
-        if(!Validator::length(3,100)->validate($dados['nome'])) {
+        if(!Validator::length(3,100)->validate(strip_tags($dados['nome']))) {
             return $response->withJson(
                 [
                     'nome' => 'O campo Nome contém um valor inválido!'
             ], 400);
         }
 
+        //validar se o nome do grupo não existe
+        $validarGrupo = \Model\Grupo::
+            where('nome', '=', strip_tags(trim($dados['nome'])) )->
+            select('id')->
+        get();
+
+        if(isset($validarGrupo[0]->id)) {
+            return $response->withJson(
+                [
+                    'nome' => 'Já existe um grupo com este nome!'
+            ], 400); 
+        }
+
         
         try {
             DB::beginTransaction();
             $grupo = new \Model\Grupo;
-            $grupo->nome = $dados['nome'];
+            $grupo->nome = strip_tags(trim($dados['nome']));
             $grupo->status = 1;
             $grupo->save();
     
@@ -74,7 +87,7 @@ class Grupo {
     public function edit(Request $request, Response $response) {
         $dados = $request->getParsedBody();
         
-        if(!Validator::length(3,100)->validate($dados['nome'])) {
+        if(!Validator::length(3,100)->validate(strip_tags($dados['nome']))) {
             return $response->withJson(
                 [
                     'nome' => 'O campo Nome contém um valor inválido!'
@@ -90,7 +103,7 @@ class Grupo {
 
         try {
             \Model\Grupo::where('id', '=', ( (int) $dados['id']))->update([
-                'nome' => $dados['nome']
+                'nome' => strip_tags($dados['nome'])
             ]);
 
             return $response->withJson([
