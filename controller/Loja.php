@@ -22,4 +22,9 @@ class Loja {
         	'produtos' => $produtos
         ]);
     }
+
+    public function finalizar(Request $request, Response $response) {
+        $dados = $request->getParsedBody();
+        
+    }
 }

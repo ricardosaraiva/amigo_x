@@ -18,8 +18,13 @@
                 <h4 class="card-title">{{produto.titulo}}</h4>
                 <p class="card-text">R$: {{produto.valor|number_format(2, ',', '.')}}</p>
                 <div class="text-center">
-                    <input type="number" name="qtd" class="form-control" maxlength="1" max="5" onKeyDown="if(this.value.length==1 && event.keyCode!=8) return false;" >
-                    <button class="btn btn-success">Comprar</button>
+                    <form class="formProduto">
+                        <input type="hidden" name="id" value="{{produto.id}}">
+                        <input type="hidden" name="valor" value="{{produto.valor}}">
+                        <input type="hidden" name="descricao" value="{{produto.titulo}}">
+                        <input type="number" name="qtd" class="form-control" maxlength="1" max="5" onKeyDown="if(this.value.length==1 && event.keyCode!=8) return false;" >
+                        <button class="btn btn-success" >Adicionar ao carrinho</button>
+                    </form>
                 </div>
             </div>
       </div>   
