@@ -198,7 +198,7 @@ function resizeMsg() {
         || document.documentElement.clientHeight
         || document.body.clientHeight;
 
-    $("#mensagens").css('height', (h - 220));
+    $("#mensagens").css('height', (h - 270));
 }
 
 $(document).ready(function () {
@@ -208,3 +208,112 @@ $(document).ready(function () {
         resizeMsg();
     });
 })
+
+function chat() {
+    ajax({
+        url: '/mensagem/chat',
+        type: 'get',
+        success: function (json) {
+            $('#chatSessao').html('<option value="0">SELECIONAR CONVERSA</option>');
+
+            for (i in  json ) {
+                $('#chatSessao').append('<option value="'+json[i].id+'">' + json[i].descricao + '</option>');
+            }
+
+            $('#chat').fadeIn();
+        }
+    })
+}
+
+function chatFechar() {
+    $('#mensagens').html('');
+    $('#chat').fadeOut();
+    chatCancelar = true;
+}
+
+var chatMsgId = 0;
+var chatCancelar = true;
+var conexaoAjax;
+function chatAjax() {
+
+    if(chatCancelar == true) {
+        setTimeout(function() {
+            chatAjax();
+        }, 1000);
+        return;
+    }
+
+    var sessao = $('#chatSessao').val();
+    var chatUsuario = $('#chatUsuario').val();
+
+    conexaoAjax = $.ajax({
+        url: '/mensagem/msg',
+        cache: false,
+        data: {sessao: sessao,  ultimaMsg: chatMsgId},
+        type: 'get',
+        success: function ( json ) {
+            
+
+            var classUsuario = '';
+            var nome = '';
+            for ( i in json ) {
+                
+                classUsuario = ( parseInt(chatUsuario) == json[i].id_usuario ) ? 'usuario' : '';
+                nome = ( parseInt(chatUsuario) == json[i].id_usuario ) ? 'EU' : json[i].nome;
+                $('#mensagens').append('<div class="mensagem">'+
+                    '<b class="' + classUsuario + '">'+ nome +':</b> ' 
+                        + '<span class="data">(' + json[i].data + ') </span> <br>'+ json[i].msg +
+                '</div>');
+
+                chatMsgId = json[i].id;
+            }
+
+            $('#mensagens').scrollTop($('#mensagens')[0].scrollHeight);
+
+            setTimeout(function() {
+                chatAjax();
+            }, 1000);
+        },
+        error: function () {
+           setTimeout(function() {
+                chatAjax();
+           }, 1000);
+        }
+   });
+}
+
+$('#formChat').submit(function (e) {
+    $('#formChat textarea, #formChat button').prop('disabled', true).css('cursor', 'wait');
+    e.preventDefault();
+
+    var sessao = $('#chatSessao').val();
+    var msg = $('#formChat textarea').val();
+
+    $.ajax({
+        url: '/mensagem/add',
+        cache: false,
+        data: {sessao: sessao,  ultimaMsg: chatMsgId, msg: msg},
+        type: 'post',
+        success: function ( json ) {
+            $('#formChat textarea, #formChat button').prop('disabled', false).css('cursor', 'default').val('');
+        },
+        error: function () {
+            $('#formChat textarea, #formChat button').prop('disabled', false).css('cursor', 'default');
+           modal('Erro ao enviar mensagem', 'erro');
+        }
+   });
+})
+
+$('#chatSessao').change(function () {
+    var chat = $(this).val();
+    $('#mensagens').html('');
+    
+    if( parseInt(chat) == 0) {
+        chatCancelar =  true;
+    }
+    
+    chatCancelar =  false;
+    chatMsgId = 0;
+});
+
+chatAjax();

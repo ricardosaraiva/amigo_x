@@ -43,13 +43,6 @@ class Grupo {
             ], 400);
         }
 
-        if(isset($validarGrupo[0]->id)) {
-            return $response->withJson(
-                [
-                    'nome' => 'Você já criou um grupo com este nome!'
-            ], 400); 
-        }
-
         
         try {
             DB::beginTransaction();

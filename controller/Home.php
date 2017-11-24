@@ -24,7 +24,9 @@ class Home {
 
         $sessao = \Model\Sessao::
             join('grupo_usuario', 'grupo_usuario.id_grupo','=','sessao.id_grupo')->
+            join('sessao_usuario', 'sessao.id','=','sessao_usuario.id_sessao')->
             where('sessao.status','=','1')->
+            where('sessao_usuario.id_usuario','=',$_SESSION['id'])->
             where('grupo_usuario.id_usuario','=',$_SESSION['id'])->
             select('sessao.id', 'sessao.descricao', 'sessao.data', 'grupo_usuario.permissao')->
         get();

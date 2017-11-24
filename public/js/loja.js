@@ -5,6 +5,8 @@ $(".formProduto").submit(function (e) {
     var valor = $(this).children('input[name="valor"]').val();
     var descricao = $(this).children('input[name="descricao"]').val();
     var qtd = $(this).children('input[name="qtd"]').val();
+
+    qtd = qtd == '' ? 1 : qtd;
     
     var pedido = localStorage.getItem("pedido");
 
@@ -38,7 +40,7 @@ $(".formProduto").submit(function (e) {
 function carrinho ( remover ) {
     var pedidos = ( localStorage.getItem("pedido") == null ) ? 0 : JSON.parse(localStorage.getItem("pedido"));
     
-    if(pedidos.length == 0) {
+    if(pedidos.length == 0 || pedidos == 0) {
         modal('Nenhum produto no carrinho!', 'erro');
         return false;
     }
@@ -66,7 +68,7 @@ function carrinho ( remover ) {
     $('#carrinhoTotal').html('Total R$: ' + moeda(total, 2));
 
     if(remover != true) {
-        $('#carrinho').trigger('reset');
+        $('#carrinhoForm').trigger('reset');
         showModal("#modalCarrinho");
         return;
     }
@@ -95,3 +97,41 @@ function calcularTotalPedido() {
 }
 
 calcularTotalPedido();
+
+$('#carrinhoForm').submit(function () {
+
+    var cep = $('#pedidoCep').val();
+    var rua = $('#pedidoRua').val();
+    var numero = $('#pedidoNumero').val();
+    var complemento = $('#pedidoComplemento').val();
+    var cidade = $('#pedidoCidade').val();
+    var uf = $('#pedidoUf').val();
+    var cartao = $('#pedidoCartao').val();
+    var cpf = $('#pedidoCpf').val();
+    var codigoSegunranca = $('#pedidoCodSeguranca').val();
+    var pedido =  JSON.parse(localStorage.getItem('pedido'));
+
+    ajax({
+        url: '/pedido/finalizar',
+        type: 'post',
+        data: {
+            cep: cep,
+            rua: rua,
+            numero: numero,
+            complemento: complemento,
+            cidade: cidade,
+            uf: uf,
+            cartao: cartao,
+            cpf: cpf,
+            codigoSegunranca: codigoSegunranca,
+            pedido: pedido
+        },
+        success: function (json) {
+            retornoOperacaoSucesso(json);
+            localStorage.removeItem('pedido');
+            calcularTotalPedido();
+            $("#modalCarrinho").modal('hide');
+        }
+    });
+    
+});

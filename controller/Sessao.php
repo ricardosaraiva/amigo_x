@@ -39,10 +39,13 @@ class Sessao {
         //Sessão
         $sessao = \Model\Sessao::
             join('grupo_usuario', 'grupo_usuario.id_grupo','=','sessao.id_grupo')->
+            join('sessao_usuario', 'sessao.id','=','sessao_usuario.id_sessao')->
             where('sessao.status','=','1')->
+            where('sessao_usuario.id_usuario','=',$_SESSION['id'])->
             where('grupo_usuario.id_usuario','=',$_SESSION['id'])->
             select('sessao.id', 'sessao.descricao', 'sessao.data', 'grupo_usuario.permissao')->
         get();
+
 
         $this->c['view']->render($response, 'sessao.html', [
             'grupos' => $grupos,
@@ -54,10 +57,10 @@ class Sessao {
         $dados = $request->getParsedBody();
 
         //valida se o usuario tem acesso para adicionar uma sessão de amigo segreto 
-        $permissao = \Model\Grupo::getPermissao($_SESSION['id'], $sessao[0]->id_grupo);
+        $permissao = \Model\Grupo::getPermissao($_SESSION['id'], $dados['grupo']);
         if(!in_array($permissao, ['dono', 'administrador'])) {
             return $response->withJson([
-                'erro' => 'Ocorreu um erro inesperado!'
+                'erro' => 'Grupo inválido!'
             ], 400);    
         }
 
@@ -152,6 +155,7 @@ class Sessao {
             ]);
 
         } catch( \Exception $e ) {
+            echo $e;
             DB::rollback();
             return $response->withJson(
                 [
@@ -171,6 +175,7 @@ class Sessao {
             where('status','=', 1)->
             select('id_grupo')->
         get();
+
 
         if(!($sessao[0]->id_grupo)) {
             return $response->withJson([
@@ -203,7 +208,7 @@ class Sessao {
         get();
 
         if(!isset($sessao[0]->id)) {
-            header('location: sessao/');
+            header('location: /sessao');
             exit;
         }
 
@@ -219,6 +224,11 @@ class Sessao {
             where('sessao_usuario.id_usuario', '=', $_SESSION['id'])->
             select('usuario.nome')->
         get();
+
+        if(!isset($amigo[0]->nome)) {
+            header('location: /sessao');
+            exit;
+        }
 
 
         $data = new \DateTime($sessao[0]->data);

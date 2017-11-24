@@ -34,6 +34,7 @@ $('#login, #registrar').submit(function (e) {
                 return false;
             }
 
+            localStorage.removeItem('pedido');
             window.location.href = '/';
         }
     })

@@ -40,5 +40,11 @@ $app->group('/', function () use ($app) {
 
     //loja
     $app->get('loja', 'Controller\Loja:index');
+    $app->post('pedido/finalizar', 'Controller\Loja:finalizar');
+
+    //mensagem
+    $app->get('mensagem/chat', 'Controller\Mensagem:chat');
+    $app->get('mensagem/msg', 'Controller\Mensagem:msg');
+    $app->post('mensagem/add', 'Controller\Mensagem:add');
 
 })->add(new Middleware\Autenticar);

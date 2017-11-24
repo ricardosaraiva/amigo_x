@@ -56,7 +56,8 @@ CREATE TABLE sessao_chat (
     id_sessao INT(11),
     id_usuario INT(11),
     msg MEDIUMTEXT,
-    created_at DATETIME
+    created_at DATETIME,
+    updated_at DATETIME
 ) ENGINE = ARCHIVE;
 
 CREATE TABLE produtos (

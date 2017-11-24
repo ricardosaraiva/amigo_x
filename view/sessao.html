@@ -26,7 +26,7 @@
                 <td>{{sessao.descricao}}</td>
                 <td>{{sessao.data|date('d/m/Y h:i')}}</td>
                 <td>
-                    {% if sessao.permisao == 'administrador' or sessao.permisao == 'dono' %}
+                    {% if sessao.permissao == 'administrador' or sessao.permissao == 'dono' %}
                         <button class="btn btn-danger" onclick="cancelar({{sessao.id}})">
                             <i class="fa fa-times"></i>
                         </button>

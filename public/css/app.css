@@ -229,6 +229,8 @@ h1.login {
 }
 
 .mensagens {
+    right: 0px;
+    width: 500px;
     margin-top: 5px;
     margin-right: 12px;
     position: absolute;
@@ -239,11 +241,15 @@ h1.login {
     color: #c9302c;
 }
 
+.mensagens  .data {
+    font-size: 12px;
+}
+
 .mensagem {
+    margin-left: 25px;
     border-bottom: dashed 1px #ccc;
     margin-bottom: 10px;
 }
-
 
 .chat .mensagens::-webkit-scrollbar {
     width: 8px;
@@ -264,6 +270,10 @@ h1.login {
 
     .navbar .carrinho {
         display: block;
+        width: 100%;
+    }
+
+    .mensagens {
         width: 100%;
     }
 

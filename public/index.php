@@ -23,9 +23,11 @@ $container['view'] = function ($container) {
     $basePath = rtrim(str_ireplace('index.php', '', $container['request']->getUri()->getBasePath()), '/');
     $view->addExtension(new Slim\Views\TwigExtension($container['router'], $basePath));
 
-    $id = isset( $_SESSION['id']) ? (bool)  $_SESSION['id'] : 0;
+    $auth = isset( $_SESSION['id']) ? (bool)  $_SESSION['id'] : 0;
+    $id = isset( $_SESSION['id']) ? $_SESSION['id'] : 0;
    
-    $view->getEnvironment()->addGlobal('auth', $id);
+    $view->getEnvironment()->addGlobal('auth', $auth);
+    $view->getEnvironment()->addGlobal('id', $id);
 
     return $view;
 };
