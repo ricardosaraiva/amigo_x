@@ -114,7 +114,7 @@ class Sessao {
             $sessao->id_grupo = (int) $dados['grupo'];
             $sessao->descricao = strip_tags(trim($dados['descricao']));
             $sessao->local = strip_tags($dados['local']);
-            $sessao->data = $dados['data'];
+            $sessao->data = \Helpers\Formatar::dataDb($dados['data']);
             $sessao->status = 1;
             $sessao->obs = strip_tags($dados['obs']);
             $sessao->save();

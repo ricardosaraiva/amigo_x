@@ -98,7 +98,9 @@ function calcularTotalPedido() {
 
 calcularTotalPedido();
 
-$('#carrinhoForm').submit(function () {
+$('#carrinhoForm').submit(function (e) {
+
+    e.preventDefault();
 
     var cep = $('#pedidoCep').val();
     var rua = $('#pedidoRua').val();
