@@ -28,6 +28,9 @@ input {
 textarea {
     resize: vertical;
 }
+.container {
+    margin-top: 70px;
+}
 
 .table td {
     vertical-align: middle;

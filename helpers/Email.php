@@ -14,7 +14,6 @@ class Email extends PHPMailer{
         $this->FromName = $container->get('settings')['mail']['nome'];    
         $this->SMTPDebug = 0;		
         $this->SMTPAuth = true;		
-        $this->SMTPAuth = true;	
         $this->CharSet="UTF-8";	
         $this->SMTPSecure = $container->get('settings')['mail']['secure'];  			
         $this->Port = $container->get('settings')['mail']['porta'];  		
