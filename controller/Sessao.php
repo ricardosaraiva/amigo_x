@@ -216,6 +216,7 @@ class Sessao {
             join('sessao_usuario', 'usuario.id', '=', 'sessao_usuario.id_usuario')->
             where('sessao_usuario.id_sessao', '=', (int) $args['id'])->
             select('usuario.nome', 'sessao_usuario.id_usuario')->
+            orderBy('usuario.nome')->
         get();
 
         $amigo =  \Model\Usuario::
